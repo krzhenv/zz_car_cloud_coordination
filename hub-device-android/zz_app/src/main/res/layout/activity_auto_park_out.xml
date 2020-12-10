@@ -72,10 +72,11 @@
 
         <ImageButton
             android:id="@+id/Halfout"
-            android:layout_width="100dp"
+            android:layout_width="130dp"
             android:layout_height="110dp"
             android:scaleType="fitXY"
             android:src="@drawable/halfout"
+            android:background="#00000000"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.143"
@@ -87,10 +88,11 @@
 
         <ImageButton
             android:id="@+id/Fullout"
-            android:layout_width="100dp"
+            android:layout_width="130dp"
             android:layout_height="110dp"
             android:scaleType="fitXY"
             android:src="@drawable/fullout"
+            android:background="#00000000"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.87"
@@ -121,10 +123,10 @@
             android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.937"
+            app:layout_constraintHorizontal_bias="0.906"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.971" />
+            app:layout_constraintVertical_bias="0.976" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

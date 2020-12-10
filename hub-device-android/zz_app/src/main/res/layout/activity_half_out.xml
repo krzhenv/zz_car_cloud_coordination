@@ -72,13 +72,14 @@
 
         <ImageButton
             android:id="@+id/Leftforward"
-            android:layout_width="100dp"
+            android:layout_width="120dp"
             android:layout_height="110dp"
+            android:background="#00000000"
             android:scaleType="fitXY"
             android:src="@drawable/leftforward"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.057"
+            app:layout_constraintHorizontal_bias="0.027"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.6">
@@ -87,13 +88,14 @@
 
         <ImageButton
             android:id="@+id/Forwardahead"
-            android:layout_width="100dp"
+            android:layout_width="120dp"
             android:layout_height="110dp"
+            android:background="#00000000"
             android:scaleType="fitXY"
             android:src="@drawable/forwardahead"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.512"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.6">
@@ -102,20 +104,19 @@
 
         <ImageButton
             android:id="@+id/Rightforward"
-            android:layout_width="100dp"
+            android:layout_width="120dp"
             android:layout_height="110dp"
             android:scaleType="fitXY"
             android:src="@drawable/rightforward"
+            android:background="#00000000"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.942"
+            app:layout_constraintHorizontal_bias="0.976"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.6">
 
         </ImageButton>
-
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

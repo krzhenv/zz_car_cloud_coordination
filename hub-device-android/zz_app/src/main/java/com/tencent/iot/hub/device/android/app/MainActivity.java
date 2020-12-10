@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 //import androidx.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.tencent.iot.hub.device.android.app.autopark.AutoPark;
 import com.tencent.iot.hub.device.android.app.remotecontrol.RemoteControlInitial;
@@ -15,7 +15,7 @@ import butterknife.OnClick;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
-    private Button button_video,button_prak,button_call,button_hand_remove;
+    private ImageButton imagebutton_video,imagebutton_prak,imagebutton_call,imagebutton_hand_remove;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,14 +23,14 @@ public class MainActivity extends Activity implements View.OnClickListener {
         setContentView(R.layout.activity_main);
 //        ButterKnife.bind(this);
 
-        button_video= (Button)findViewById(R.id.video);
-        button_prak = (Button)findViewById(R.id.au_park);
-        button_call= (Button)findViewById(R.id.call);
-        button_hand_remove= (Button)findViewById(R.id.RemoteControl_remove);
-        button_video.setOnClickListener(this);
-        button_prak.setOnClickListener(this);
-        button_call.setOnClickListener(this);
-        button_hand_remove.setOnClickListener(this);
+        imagebutton_video= findViewById(R.id.video);
+        imagebutton_prak = findViewById(R.id.au_park);
+        imagebutton_call= findViewById(R.id.call);
+        imagebutton_hand_remove= findViewById(R.id.RemoteControl_remove);
+        imagebutton_video.setOnClickListener(this);
+        imagebutton_prak.setOnClickListener(this);
+        imagebutton_call.setOnClickListener(this);
+        imagebutton_hand_remove.setOnClickListener(this);
     }
 
 

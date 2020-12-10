@@ -41,7 +41,7 @@ public class ScalableImageView extends androidx.appcompat.widget.AppCompatImageV
     private int circle ;
     private float degree0;//按下角度
     private float degree;//转动角度
-    private static float Degree;//转动角度
+    private  float Degree;//转动角度
 
     private Handler handler = null;
     private RemoteControl remoteControl = null;
@@ -123,11 +123,11 @@ public class ScalableImageView extends androidx.appcompat.widget.AppCompatImageV
                     }
                     Log.d("Degree11111",degree+"");
                     Degree = degree;
-                    //handler测试
-                     handler = rc.getHandler();
-                    Message msg = new Message();
-                    msg.what = RemoteControl.TEST;
-                    handler.sendMessage(msg);
+//                    //handler测试
+//                     handler = rc.getHandler();
+//                    Message msg = new Message();
+//                    msg.what = RemoteControl.TEST;
+//                    handler.sendMessage(msg);
 
                     final RotateAnimation rotateAnimation = new RotateAnimation(0f, degree, bitmap.getWidth() / 2, bitmap.getHeight() / 2);
                     matrix.postRotate(degree,bitmap.getWidth()/2, bitmap.getHeight()/ 2);
@@ -149,7 +149,7 @@ public class ScalableImageView extends androidx.appcompat.widget.AppCompatImageV
         return true;
     }
 
-    public static Float getDegree() {
+    public  Float getDegree() {
         return Degree;
     }
 

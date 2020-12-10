@@ -66,7 +66,7 @@ public class RemoteControl extends Activity {
     private ImageButton imageButton_forward,imageButton_backward;
     private ImageView app_video_play;
     private Spinner Video_Modul_Spinner;
-    private  static float Degree;//转动角度
+    private   float Degree;//转动角度
 
     @SuppressLint("InvalidWakeLockTag")
     @Override
@@ -111,30 +111,29 @@ public class RemoteControl extends Activity {
             }
         });
 
-
+        sv = findViewById(R.id.steering_wheel);
         //方向盘角度在速度处显示
         new Thread(new Runnable() {
             @Override
             public void run() {
                 while(true){
-                    Degree = ScalableImageView.getDegree();
+                    Degree = sv.getDegree();
                 }
             }
         }).start();
 
 
         //验证Degree是不是动态的
-//        countDownTimer=new CountDownTimer(10000,1000) {
-//            @Override
-//            public void onTick(long millisUntilFinished) {
-//                Speed = findViewById(R.id.speed);
-//                Speed.setText(String.valueOf(Degree));
-//            }
-//            @Override
-//            public void onFinish() {
-//            }
-//        }.start();
-
+        countDownTimer=new CountDownTimer(1000000,200) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                Speed = findViewById(R.id.speed);
+                Speed.setText(String.valueOf(Degree));
+            }
+            @Override
+            public void onFinish() {
+            }
+        }.start();
 
 
         //下拉单选按钮
@@ -166,7 +165,7 @@ public class RemoteControl extends Activity {
                                     .setScaleType(PlayStateParams.fillparent) //视频界面剪裁设置
                                     .forbidTouch(false)
                                     .hideSteam(false)
-                                    .hideMenu(false)
+                                    .hideMenu(true)
                                     .hideCenterPlayer(true)
                                     .hideBack(false)
                                     .setOnlyFullScreen(true)
@@ -287,26 +286,26 @@ public class RemoteControl extends Activity {
 
     }
 
-    //handler方法去弄一下试试
-    private Handler handler = new Handler() {
-        public void handleMessage(Message msg) {
-            switch (msg.what) {
-                case TEST:
-                    Toast.makeText(RemoteControl.this, "test handler", Toast.LENGTH_SHORT).show();
-                    break;
-                default:
-                    break;
-            }
-        }
-    };
-
-    public Handler getHandler() {
-        return handler;
-    }
-
-    public void setHandler(Handler handler) {
-        this.handler = handler;
-    }
+//    //handler方法去弄一下试试
+//    private Handler handler = new Handler() {
+//        public void handleMessage(Message msg) {
+//            switch (msg.what) {
+//                case TEST:
+//                    Toast.makeText(RemoteControl.this, "test handler", Toast.LENGTH_SHORT).show();
+//                    break;
+//                default:
+//                    break;
+//            }
+//        }
+//    };
+//
+//    public Handler getHandler() {
+//        return handler;
+//    }
+//
+//    public void setHandler(Handler handler) {
+//        this.handler = handler;
+//    }
 
 
     //后四个视频播放器播放
@@ -316,7 +315,7 @@ public class RemoteControl extends Activity {
                 .setScaleType(PlayStateParams.fillparent) //视频界面剪裁设置
                 .forbidTouch(false)
                 .hideSteam(true)
-                .hideMenu(false)
+                .hideMenu(true)
                 .hideCenterPlayer(true)
                 .hideBack(false)
                 .setOnlyFullScreen(true)
@@ -393,7 +392,6 @@ public class RemoteControl extends Activity {
                 })
                 .setPlaySource(url)
                 .startPlay();
-
     }
 
     @Override
